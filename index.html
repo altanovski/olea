@@ -5,254 +5,260 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>OLEA – Turning Waste Oil into Sustainable Value</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
+:root {
+  --green: #2ecc71;
+  --dark: #0f1f1a;
+  --glass: rgba(255,255,255,0.12);
+}
+
+* { box-sizing: border-box; }
+
 body {
-    margin: 0;
-    font-family: "Inter", Arial, sans-serif;
-    background-color: #f7f9f8;
-    color: #1f2d2b;
-    line-height: 1.6;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #123f2b, #07130f);
+  color: #f2f5f4;
+  overflow-x: hidden;
 }
 
 header {
-    background: linear-gradient(120deg, #1b5e20, #2e7d32);
-    color: white;
-    padding: 90px 12%;
+  min-height: 100vh;
+  padding: 100px 10%;
+  background:
+    linear-gradient(135deg, rgba(46,204,113,0.25), transparent),
+    url("https://images.unsplash.com/photo-1508615039623-a25605d2b022?auto=format&fit=crop&w=1600&q=80") center/cover;
 }
 
 header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+  font-size: 4rem;
+  margin-bottom: 20px;
 }
 
 header p {
-    font-size: 1.2rem;
-    max-width: 700px;
+  max-width: 600px;
+  font-size: 1.2rem;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 10%;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 24px;
+  font-weight: 500;
 }
 
 section {
-    padding: 80px 12%;
-    border-bottom: 1px solid #e0e0e0;
+  padding: 100px 10%;
 }
 
-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    color: #1b5e20;
+h2 {
+  font-size: 2.6rem;
+  margin-bottom: 30px;
 }
 
-section p {
-    max-width: 800px;
-    margin-bottom: 16px;
-}
-
-.highlight {
-    font-weight: 600;
-    color: #2e7d32;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 24px;
 }
 
 .card {
-    background: white;
-    padding: 24px;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  background: var(--glass);
+  border-radius: 16px;
+  padding: 28px;
+  backdrop-filter: blur(20px);
+}
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.tab {
+  padding: 12px 20px;
+  background: var(--glass);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: var(--green);
+  color: #001a0d;
+}
+
+.tab-content {
+  display: none;
+  max-width: 800px;
+}
+
+.tab-content.active {
+  display: block;
 }
 
 .simulator {
-    background: #ffffff;
-    padding: 32px;
-    border-radius: 12px;
-    max-width: 600px;
+  max-width: 600px;
+  background: var(--glass);
+  padding: 30px;
+  border-radius: 20px;
 }
 
-label {
-    display: block;
-    margin-top: 20px;
-    font-weight: 600;
+input[type=range] {
+  width: 100%;
 }
 
-input, select {
-    width: 100%;
-    padding: 12px;
-    margin-top: 8px;
-    font-size: 1rem;
-}
-
-button {
-    margin-top: 24px;
-    background: #2e7d32;
-    color: white;
-    border: none;
-    padding: 14px 20px;
-    font-size: 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #1b5e20;
-}
-
-.result {
-    margin-top: 24px;
-    background: #e8f5e9;
-    padding: 20px;
-    border-radius: 8px;
+.counter {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--green);
 }
 
 footer {
-    padding: 40px 12%;
-    background: #1f2d2b;
-    color: white;
-}
-
-footer p {
-    max-width: 700px;
+  padding: 60px 10%;
+  text-align: center;
+  background: #020806;
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+  <strong>OLEA</strong>
+  <div>
+    <a href="#how">How it works</a>
+    <a href="#impact">Impact</a>
+    <a href="#sim">Simulator</a>
+    <a href="#learn">Learn</a>
+  </div>
+</nav>
+
 <header>
-    <h1>OLEA</h1>
-    <p>
-        Turning waste oil into measurable environmental impact and sustainable fuel pathways
-        for biodiesel, Sustainable Aviation Fuel (SAF), and clean mobility.
-    </p>
+  <h1>OLEA</h1>
+  <p>
+    Turning waste oil into measurable environmental impact,
+    sustainable fuel pathways and real value.
+  </p>
 </header>
 
-<section>
-    <h2>What is OLEA?</h2>
-    <p>
-        <span class="highlight">OLEA</span> is a digital waste oil collection and conversion platform
-        designed to close the gap between everyday waste generation and sustainable fuel production.
-    </p>
-    <p>
-        Instead of treating waste cooking oil as a disposal problem, OLEA recognizes it as a
-        <span class="highlight">strategic energy feedstock</span> for sectors struggling to decarbonize —
-        especially aviation and urban transport.
-    </p>
+<section id="how">
+<h2>How OLEA Works</h2>
+<div class="cards">
+  <div class="card">
+    <h3>Collect</h3>
+    Waste oil is safely collected instead of polluting water systems.
+  </div>
+  <div class="card">
+    <h3>Verify</h3>
+    Oil is classified and logged for traceability.
+  </div>
+  <div class="card">
+    <h3>Convert</h3>
+    Feedstock supports biodiesel & SAF production.
+  </div>
+</div>
 </section>
 
-<section>
-    <h2>Why Waste Oil Matters</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Environmental Risk</h3>
-            <p>
-                One liter of improperly disposed waste oil can contaminate up to
-                <span class="highlight">1,000 liters of freshwater</span>, damaging ecosystems
-                and sewage infrastructure.
-            </p>
-        </div>
-        <div class="card">
-            <h3>Energy Opportunity</h3>
-            <p>
-                When collected and classified correctly, waste oil becomes a
-                <span class="highlight">high-quality feedstock</span> for biodiesel
-                and Sustainable Aviation Fuel (SAF).
-            </p>
-        </div>
-        <div class="card">
-            <h3>System Gap</h3>
-            <p>
-                The main challenge is not technology, but
-                <span class="highlight">organization, traceability, and participation</span>.
-            </p>
-        </div>
-    </div>
+<section id="impact">
+<h2>Your Impact</h2>
+<div class="cards">
+  <div class="card">
+    <div class="counter" id="water">0</div>
+    Liters of water protected
+  </div>
+  <div class="card">
+    <div class="counter" id="points">0</div>
+    Sustainability points
+  </div>
+  <div class="card">
+    <div class="counter" id="fuel">0</div>
+    Clean fuel contribution units
+  </div>
+</div>
 </section>
 
-<section>
-    <h2>How OLEA Works</h2>
-    <p><strong>1.</strong> Waste oil is collected through OLEA-enabled systems.</p>
-    <p><strong>2.</strong> The liquid is verified and classified as oil.</p>
-    <p><strong>3.</strong> Each contribution is digitally logged for traceability.</p>
-    <p><strong>4.</strong> Users receive sustainability points.</p>
-    <p><strong>5.</strong> Users decide which sector their impact supports.</p>
+<section id="sim">
+<h2>Impact Simulator</h2>
+
+<div class="simulator">
+  <label>Waste oil collected (ml)</label>
+  <input type="range" min="0" max="5000" value="1000" id="oil">
+
+  <p><strong id="ml">1000 ml</strong></p>
+  <p>Points: <span class="counter" id="pts">200</span></p>
+  <p>Water protected: <span id="wat">1000</span> L</p>
+</div>
 </section>
 
-<section>
-    <h2>Waste Oil Conversion Simulator</h2>
+<section id="learn">
+<h2>Learn More</h2>
 
-    <div class="simulator">
-        <label>How much waste oil did you collect? (ml)</label>
-        <input type="number" id="oilAmount" value="1000"/>
+<div class="tabs">
+  <div class="tab active" data-tab="saf">SAF</div>
+  <div class="tab" data-tab="bio">Biodiesel</div>
+  <div class="tab" data-tab="oil">Waste Oil</div>
+</div>
 
-        <label>Select the sector you want to support</label>
-        <select id="sector">
-            <option value="Aviation (SAF)">Aviation (SAF)</option>
-            <option value="Fuel Distribution (Biodiesel)">Fuel Distribution (Biodiesel)</option>
-            <option value="Urban Bus Transport">Urban Bus Transport</option>
-            <option value="Market Rewards">Market Discounts</option>
-        </select>
+<div id="saf" class="tab-content active">
+  <p>
+    Sustainable Aviation Fuel (SAF) is a drop-in fuel reducing lifecycle CO₂ emissions
+    by up to 80%. The biggest limitation today is feedstock availability.
+  </p>
+</div>
 
-        <button onclick="calculateImpact()">Calculate Impact</button>
+<div id="bio" class="tab-content">
+  <p>
+    Biodiesel is a mature renewable fuel used in road transport and public fleets,
+    enabling immediate emission reductions.
+  </p>
+</div>
 
-        <div id="result" class="result" style="display:none;"></div>
-    </div>
-</section>
+<div id="oil" class="tab-content">
+  <p>
+    One liter of waste oil can contaminate up to 1,000 liters of freshwater if disposed improperly.
+  </p>
+</div>
 
-<section>
-    <h2>Your Environmental Impact</h2>
-    <p>
-        OLEA transforms individual actions into system-level impact by aggregating
-        small volumes into meaningful clean fuel pathways.
-    </p>
-</section>
-
-<section>
-    <h2>SAF & Biodiesel Explained</h2>
-    <p>
-        <strong>Sustainable Aviation Fuel (SAF)</strong> is a drop-in replacement for
-        conventional jet fuel and can reduce lifecycle CO₂ emissions by up to 80%.
-    </p>
-    <p>
-        <strong>Biodiesel</strong> is a mature renewable fuel technology used in road
-        transport and public bus fleets, enabling immediate emission reductions.
-    </p>
-</section>
-
-<section>
-    <h2>Ecosystem Alignment</h2>
-    <p>
-        OLEA aligns with national and international sustainability initiatives,
-        including efforts supported by the
-        <strong>Turkish Sustainable Aviation Alliance (TSAA)</strong>.
-    </p>
 </section>
 
 <footer>
-    <p>
-        <strong>OLEA</strong><br/>
-        Waste Oil → Value → Clean Mobility
-    </p>
+  OLEA — Waste Oil → Value → Clean Mobility
 </footer>
 
 <script>
-function calculateImpact() {
-    const oil = document.getElementById("oilAmount").value;
-    const sector = document.getElementById("sector").value;
+const oil = document.getElementById("oil");
+const ml = document.getElementById("ml");
+const pts = document.getElementById("pts");
+const wat = document.getElementById("wat");
 
-    const points = (oil / 1000) * 200;
-    const waterSaved = oil; // 1L oil = 1000L water
-    const resultBox = document.getElementById("result");
-
-    resultBox.style.display = "block";
-    resultBox.innerHTML = `
-        <p><strong>Sustainability Points:</strong> ${points.toFixed(0)}</p>
-        <p><strong>Sector Supported:</strong> ${sector}</p>
-        <p><strong>Water Protected:</strong> ~${waterSaved.toLocaleString()} liters</p>
-        <p><strong>Impact:</strong> Safe recovery of waste oil and contribution to clean fuel pathways.</p>
-    `;
+oil.oninput = () => {
+  ml.innerText = oil.value + " ml";
+  pts.innerText = Math.round(oil.value / 1000 * 200);
+  wat.innerText = oil.value;
 }
+
+document.querySelectorAll(".tab").forEach(tab => {
+  tab.onclick = () => {
+    document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
+    document.querySelectorAll(".tab-content").forEach(c=>c.classList.remove("active"));
+    tab.classList.add("active");
+    document.getElementById(tab.dataset.tab).classList.add("active");
+  }
+});
 </script>
 
 </body>

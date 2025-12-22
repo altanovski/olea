@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OLEA – Circular Energy Platform</title>
+<title>OLEA – Turning Waste Oil into Sustainable Value</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -40,7 +40,7 @@ nav{
   align-items:center;
 }
 
-nav .brand{
+.brand{
   display:flex;
   align-items:center;
   gap:14px;
@@ -60,7 +60,7 @@ nav a{
 .hero{
   max-width:1200px;
   margin:auto;
-  padding:110px 20px;
+  padding:120px 20px;
 }
 
 .hero h1{
@@ -69,8 +69,8 @@ nav a{
 }
 
 .hero p{
-  max-width:650px;
-  font-size:1.1rem;
+  max-width:700px;
+  font-size:1.15rem;
 }
 
 section{
@@ -83,7 +83,7 @@ section{
 }
 
 h2{
-  font-size:2.3rem;
+  font-size:2.4rem;
   margin-bottom:24px;
   color:var(--green);
 }
@@ -100,35 +100,43 @@ h2{
   border-radius:10px;
 }
 
-.card h3{
-  margin-top:0;
-  color:#145c3a;
-}
-
 .system-bg{
   background:
     linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
     url("images/system-city.png") center/contain no-repeat;
 }
 
+input, select{
+  padding:10px;
+  font-size:1rem;
+  margin-top:10px;
+}
+
 .sdg-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:24px;
 }
 
 .sdg-card{
   background:#f9fbfa;
-  border-left:6px solid var(--green);
   padding:20px;
+  border-left:6px solid;
   cursor:pointer;
-  transition:transform .2s, box-shadow .2s;
+  transition:0.2s;
 }
 
 .sdg-card:hover{
   transform:translateY(-4px);
   box-shadow:0 10px 24px rgba(0,0,0,0.08);
 }
+
+.sdg6{border-color:#26BDE2}
+.sdg7{border-color:#FCC30B}
+.sdg9{border-color:#FD6925}
+.sdg11{border-color:#FD9D24}
+.sdg12{border-color:#BF8B2E}
+.sdg13{border-color:#3F7E44}
 
 footer{
   background:#0f1f1a;
@@ -149,13 +157,13 @@ footer img{
 <header>
   <nav>
     <div class="brand">
-      <img src="images/ouroboros.png" alt="Ouroboros Team Logo">
+      <img src="images/ouroboros.png" alt="Ouroboros Logo">
       <strong>OLEA</strong>
     </div>
     <div>
       <a href="#about">About</a>
-      <a href="#how">How It Works</a>
       <a href="#impact">Impact</a>
+      <a href="#points">OLEA Points</a>
       <a href="#sdg">SDGs</a>
     </div>
   </nav>
@@ -163,8 +171,8 @@ footer img{
   <div class="hero">
     <h1>Activating Waste Oil for Sustainable Aviation and Clean Mobility</h1>
     <p>
-      OLEA is a circular energy platform transforming waste oil into measurable
-      environmental impact and sustainable fuel pathways for aviation and urban mobility.
+      OLEA transforms waste oil into measurable environmental impact,
+      Sustainable Aviation Fuel (SAF) feedstock and clean urban mobility benefits.
     </p>
   </div>
 </header>
@@ -172,47 +180,18 @@ footer img{
 <section id="about">
 <div class="container">
 <h2>About OLEA</h2>
-
 <div class="cards">
   <div class="card">
     <h3>Vision</h3>
-    To activate waste oil as a strategic resource for the energy transition,
-    particularly in hard-to-abate sectors such as aviation.
+    Turning waste oil into a strategic resource for the energy transition.
   </div>
   <div class="card">
     <h3>System</h3>
-    OLEA combines physical collection, digital traceability and incentive-based
-    participation into a scalable upstream fuel infrastructure.
+    A traceable, incentive-based collection and allocation platform.
   </div>
   <div class="card">
     <h3>Why It Matters</h3>
-    Sustainable fuels fail without feedstock. OLEA addresses this challenge
-    at the source: everyday waste oil.
-  </div>
-</div>
-</div>
-</section>
-
-<section id="how" style="background:#f4f6f5">
-<div class="container">
-<h2>How OLEA Works</h2>
-
-<div class="cards">
-  <div class="card">
-    <h3>Collect</h3>
-    Waste oil is safely collected instead of polluting water systems.
-  </div>
-  <div class="card">
-    <h3>Verify & Track</h3>
-    Oil is verified, classified and digitally logged.
-  </div>
-  <div class="card">
-    <h3>Allocate Impact</h3>
-    Users choose whether their contribution supports SAF, biodiesel or mobility.
-  </div>
-  <div class="card">
-    <h3>Scale</h3>
-    Aggregated volumes form reliable clean fuel supply chains.
+    Sustainable fuels fail without feedstock. OLEA fixes the source.
   </div>
 </div>
 </div>
@@ -221,62 +200,99 @@ footer img{
 <section id="impact" class="system-bg">
 <div class="container">
 <h2>Environmental Impact</h2>
-
-<ul>
-  <li>Prevents freshwater contamination caused by improper waste oil disposal</li>
-  <li>Supports Sustainable Aviation Fuel (SAF) and biodiesel production</li>
-  <li>Reduces illegal reuse and infrastructure damage</li>
-</ul>
+<p style="font-size:1.15rem;max-width:900px">
+<strong>1 liter of improperly disposed waste oil can contaminate up to
+1,000,000 liters of freshwater.</strong><br><br>
+OLEA prevents this irreversible environmental damage by enabling controlled
+collection and conversion of waste oil into SAF, biodiesel and public services.
+</p>
 </div>
 </section>
 
-<section id="sdg" style="background:#f4f6f5">
+<section id="points" style="background:#f4f6f5">
+<div class="container">
+<h2>OLEA Point (OP) Conversion Engine</h2>
+
+<label><strong>Waste oil input (ml)</strong></label><br>
+<input type="number" id="oilInput" value="1000">
+
+<p><strong>Earned OLEA Points:</strong>
+<span id="opValue" style="color:#1f7a4f;font-weight:700">200</span> OP
+</p>
+
+<label><strong>Select usage sector</strong></label><br>
+<select id="sector">
+  <option value="">-- Choose --</option>
+  <option value="fuel">Fuel / Akaryakıt</option>
+  <option value="aviation">Aviation</option>
+  <option value="municipality">Municipal Services</option>
+</select>
+
+<div id="partners" style="margin-top:30px"></div>
+</div>
+</section>
+
+<section id="sdg">
 <div class="container">
 <h2>Contribution to UN Sustainable Development Goals</h2>
 
 <div class="sdg-grid">
-  <div class="sdg-card" onclick="window.open('https://sdgs.un.org/goals/goal6','_blank')">
-    <strong>SDG 6</strong><br>
-    Clean Water and Sanitation
+  <div class="sdg-card sdg6" onclick="window.open('https://sdgs.un.org/goals/goal6')">
+    <strong>SDG 6</strong><br>Clean Water and Sanitation
   </div>
-
-  <div class="sdg-card" onclick="window.open('https://sdgs.un.org/goals/goal7','_blank')">
-    <strong>SDG 7</strong><br>
-    Affordable and Clean Energy
+  <div class="sdg-card sdg7" onclick="window.open('https://sdgs.un.org/goals/goal7')">
+    <strong>SDG 7</strong><br>Affordable and Clean Energy
   </div>
-
-  <div class="sdg-card" onclick="window.open('https://sdgs.un.org/goals/goal9','_blank')">
-    <strong>SDG 9</strong><br>
-    Industry, Innovation and Infrastructure
+  <div class="sdg-card sdg9" onclick="window.open('https://sdgs.un.org/goals/goal9')">
+    <strong>SDG 9</strong><br>Industry & Infrastructure
   </div>
-
-  <div class="sdg-card" onclick="window.open('https://sdgs.un.org/goals/goal11','_blank')">
-    <strong>SDG 11</strong><br>
-    Sustainable Cities and Communities
+  <div class="sdg-card sdg11" onclick="window.open('https://sdgs.un.org/goals/goal11')">
+    <strong>SDG 11</strong><br>Sustainable Cities
   </div>
-
-  <div class="sdg-card" onclick="window.open('https://sdgs.un.org/goals/goal12','_blank')">
-    <strong>SDG 12</strong><br>
-    Responsible Consumption and Production
+  <div class="sdg-card sdg12" onclick="window.open('https://sdgs.un.org/goals/goal12')">
+    <strong>SDG 12</strong><br>Responsible Consumption
   </div>
-
-  <div class="sdg-card" onclick="window.open('https://sdgs.un.org/goals/goal13','_blank')">
-    <strong>SDG 13</strong><br>
-    Climate Action
+  <div class="sdg-card sdg13" onclick="window.open('https://sdgs.un.org/goals/goal13')">
+    <strong>SDG 13</strong><br>Climate Action
   </div>
 </div>
 </div>
 </section>
 
 <footer>
-  <img src="images/ouroboros.png" alt="Ouroboros Logo">
-  <p>
-    <strong>OLEA</strong><br>
-    Developed by the Ouroboros Team<br><br>
-    Supporting circular economy, sustainable aviation
-    and the United Nations Sustainable Development Goals.
-  </p>
+<img src="images/ouroboros.png">
+<p>
+<strong>OLEA</strong><br>
+Developed by the Ouroboros Team<br><br>
+Supporting circular economy, sustainable aviation and the UN SDGs.
+</p>
 </footer>
+
+<script>
+const oilInput = document.getElementById("oilInput");
+const opValue = document.getElementById("opValue");
+const sector = document.getElementById("sector");
+const partners = document.getElementById("partners");
+
+function updateOP(){
+  opValue.innerText = (oilInput.value / 1000) * 200;
+}
+oilInput.oninput = updateOP;
+
+sector.onchange = () => {
+  let html = "";
+  if(sector.value==="fuel"){
+    html="<h3>Fuel Partners</h3><ul><li>Petrol Ofisi</li><li>Company A</li><li>Company B</li></ul>";
+  }
+  if(sector.value==="aviation"){
+    html="<h3>Aviation Partners</h3><ul><li>Pegasus Airlines</li><li>Turkish Airlines</li></ul>";
+  }
+  if(sector.value==="municipality"){
+    html="<h3>Municipal Services</h3><ul><li>İzmir Metropolitan Municipality – Public Transport Card</li></ul>";
+  }
+  partners.innerHTML=html;
+};
+</script>
 
 </body>
 </html>

@@ -1,288 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>OLEA – Turning Waste Oil into Sustainable Value</title>
 
 <style>
 /* =====================================================
-   RESET & ROOT
+   RESET & ROOT VARIABLES
 ===================================================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", system-ui, sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Inter",system-ui,sans-serif;
 }
 
-:root {
-  --green-dark: #1f3d2b;
-  --green-main: #2f6b4f;
-  --green-light: #4caf84;
-  --glass: rgba(255,255,255,0.18);
-  --glass-strong: rgba(255,255,255,0.25);
-  --text-dark: #0e1f16;
-  --text-light: #ffffff;
+:root{
+  --green-dark:#1f3d2b;
+  --green-main:#2f6b4f;
+  --green-light:#4caf84;
+  --green-soft:#e6f4ec;
+
+  --glass:rgba(255,255,255,0.18);
+  --glass-strong:rgba(255,255,255,0.25);
+
+  --text-dark:#0e1f16;
+  --text-light:#ffffff;
 }
 
 /* =====================================================
    BODY
 ===================================================== */
-body {
-  background: #eef3ef;
-  color: var(--text-dark);
-  overflow-x: hidden;
+body{
+  background:#eef3ef;
+  color:var(--text-dark);
+  overflow-x:hidden;
 }
 
 /* =====================================================
    NAVBAR
 ===================================================== */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  background: rgba(30,60,44,0.85);
-  backdrop-filter: blur(6px);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 60px;
-  z-index: 1000;
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:80px;
+  background:rgba(30,60,44,0.85);
+  backdrop-filter:blur(6px);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 60px;
+  z-index:1000;
 }
 
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 18px;
+.nav-left{
+  display:flex;
+  align-items:center;
+  gap:18px;
 }
 
-.nav-left img {
-  height: 46px;
+.nav-left img{
+  height:46px;
 }
 
-.nav-left span {
-  color: #fff;
-  font-size: 34px;
-  font-weight: 700;
-  letter-spacing: 1px;
+.nav-left span{
+  color:#fff;
+  font-size:34px;
+  font-weight:700;
+  letter-spacing:1px;
 }
 
-nav a {
-  margin-left: 26px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  opacity: 0.9;
+nav a{
+  margin-left:26px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+  opacity:0.9;
 }
 
-nav a:hover {
-  opacity: 1;
+nav a:hover{
+  opacity:1;
 }
 
 /* =====================================================
    HERO
 ===================================================== */
-.hero {
-  min-height: 100vh;
+.hero{
+  min-height:100vh;
   background:
-    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),
     url("images/hero-eco.png") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  padding: 140px 60px 80px;
+  display:flex;
+  align-items:center;
+  padding:140px 60px 80px;
 }
 
-.hero-card {
-  max-width: 560px;
-  background: var(--glass);
-  backdrop-filter: blur(14px);
-  border-radius: 22px;
-  padding: 40px;
-  color: #fff;
+.hero-card{
+  max-width:560px;
+  background:rgba(20,35,28,0.75);
+  backdrop-filter:blur(10px);
+  border-radius:22px;
+  padding:40px;
+  color:#fff;
+  box-shadow:0 20px 40px rgba(0,0,0,0.25);
 }
 
-.hero-card img {
-  height: 64px;
-  margin-bottom: 18px;
+.hero-card img{
+  height:64px;
+  margin-bottom:18px;
 }
 
-.hero-card h1 {
-  font-size: 56px;
-  margin-bottom: 10px;
+.hero-card h1{
+  font-size:56px;
+  margin-bottom:10px;
 }
 
-.hero-card h2 {
-  font-size: 28px;
-  margin-bottom: 18px;
-  font-weight: 500;
+.hero-card h2{
+  font-size:28px;
+  margin-bottom:18px;
+  font-weight:500;
+  color:#e6f4ec;
 }
 
-.hero-card p {
-  font-size: 16px;
-  line-height: 1.6;
-  opacity: 0.95;
+.hero-card p{
+  font-size:16px;
+  line-height:1.6;
+  color:#f1f8f4;
 }
 
 /* =====================================================
    SECTION BASE
 ===================================================== */
-section {
-  padding: 100px 60px;
+section{
+  padding:100px 60px;
 }
 
-.section-title {
-  font-size: 38px;
-  margin-bottom: 40px;
+.section-title{
+  font-size:38px;
+  margin-bottom:40px;
 }
 
 /* =====================================================
-   OP CONVERSION ENGINE
+   OLEA POINT CONVERSION ENGINE
 ===================================================== */
-#op {
+#op{
   background:
-    linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+    linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.9)),
     url("images/savings.webp") center/cover no-repeat;
 }
 
-.op-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+.op-wrapper{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
 }
 
-.op-card {
-  background: var(--glass-strong);
-  backdrop-filter: blur(10px);
-  border-radius: 22px;
-  padding: 36px;
+.op-card{
+  background:var(--glass-strong);
+  backdrop-filter:blur(10px);
+  border-radius:22px;
+  padding:36px;
 }
 
-.op-card label {
-  font-weight: 600;
+.op-card label{
+  font-weight:600;
 }
 
 .op-card input,
-.op-card select {
-  width: 100%;
-  margin-top: 8px;
-  margin-bottom: 22px;
-  padding: 14px;
-  border-radius: 10px;
-  border: none;
-  font-size: 16px;
+.op-card select{
+  width:100%;
+  margin-top:8px;
+  margin-bottom:22px;
+  padding:14px;
+  border-radius:10px;
+  border:none;
+  font-size:16px;
 }
 
-.op-card button {
-  width: 100%;
-  padding: 16px;
-  border: none;
-  border-radius: 12px;
-  background: var(--green-main);
-  color: #fff;
-  font-size: 18px;
-  cursor: pointer;
+.op-card button{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:12px;
+  background:var(--green-main);
+  color:#fff;
+  font-size:18px;
+  cursor:pointer;
 }
 
-.op-card button:hover {
-  background: var(--green-dark);
+.op-card button:hover{
+  background:var(--green-dark);
 }
 
-#opResult {
-  margin-top: 20px;
-  font-weight: 600;
+#opResult{
+  margin-top:20px;
+  font-weight:600;
 }
 
 /* =====================================================
-   PARTNERS
+   PARTNER CARDS
 ===================================================== */
-.partner-card {
-  margin-top: 30px;
-  padding: 20px;
-  border-radius: 16px;
-  background: rgba(0,0,0,0.05);
-  display: none;
+.partner-card{
+  margin-top:24px;
+  padding:22px;
+  border-radius:16px;
+  background:rgba(0,0,0,0.05);
+  display:none;
+}
+
+.partner-card h3{
+  margin-bottom:10px;
 }
 
 /* =====================================================
    IMPACT
 ===================================================== */
-#impact {
+#impact{
   background:
-    linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+    linear-gradient(rgba(255,255,255,0.85),rgba(255,255,255,0.85)),
     url("images/ocean.webp") center/cover no-repeat;
 }
 
-.impact-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 30px;
+.impact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
 }
 
-.impact-box {
-  background: var(--glass-strong);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 30px;
-  text-align: center;
+.impact-box{
+  background:var(--glass-strong);
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  padding:30px;
+  text-align:center;
 }
 
 /* =====================================================
    SDGs
 ===================================================== */
-#sdgs {
-  background: #0f1e17;
-  color: #fff;
+#sdgs{
+  background:#0f1e17;
+  color:#fff;
 }
 
-.sdg-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
-  gap: 18px;
+.sdg-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:18px;
 }
 
-.sdg {
-  padding: 18px;
-  border-radius: 14px;
-  font-weight: 600;
+.sdg{
+  padding:18px;
+  border-radius:14px;
+  font-weight:600;
+  text-decoration:none;
+  color:#000;
+  transition:transform 0.2s, box-shadow 0.2s;
 }
 
-.sdg6 { background:#2bbbe0; }
-.sdg7 { background:#f9c80e; }
-.sdg11{ background:#f8961e; }
-.sdg12{ background:#c9972b; }
-.sdg13{ background:#43aa5e; }
+.sdg:hover{
+  transform:translateY(-4px);
+  box-shadow:0 6px 18px rgba(0,0,0,0.25);
+}
+
+.sdg6{background:#2bbbe0;}
+.sdg7{background:#f9c80e;}
+.sdg11{background:#f8961e;}
+.sdg12{background:#c9972b;}
+.sdg13{background:#43aa5e;}
 
 /* =====================================================
    WHY OLEA
 ===================================================== */
-#why {
+#why{
   background:
-    linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+    linear-gradient(rgba(255,255,255,0.85),rgba(255,255,255,0.85)),
     url("images/ouroboros.png") center/cover no-repeat;
 }
 
-.why-box {
-  max-width: 720px;
-  background: var(--glass-strong);
-  backdrop-filter: blur(10px);
-  border-radius: 22px;
-  padding: 40px;
+.why-box{
+  max-width:720px;
+  background:var(--glass-strong);
+  backdrop-filter:blur(10px);
+  border-radius:22px;
+  padding:40px;
 }
 
 /* =====================================================
    FOOTER
 ===================================================== */
-footer {
+footer{
   background:#000;
   color:#fff;
   text-align:center;
   padding:40px;
 }
 
-footer img {
+footer img{
   height:80px;
   margin-bottom:16px;
 }
@@ -292,14 +309,14 @@ footer img {
 ===================================================== */
 @media(max-width:900px){
   .op-wrapper,
-  .impact-grid {
-    grid-template-columns: 1fr;
+  .impact-grid{
+    grid-template-columns:1fr;
   }
-  header {
-    padding: 0 20px;
+  header{
+    padding:0 20px;
   }
-  section {
-    padding: 80px 20px;
+  section{
+    padding:80px 20px;
   }
 }
 </style>
@@ -309,7 +326,7 @@ footer img {
 
 <header>
   <div class="nav-left">
-    <img src="images/logo.png" alt="OLEA Logo"/>
+    <img src="images/logo.png" alt="OLEA logo">
     <span>OLEA</span>
   </div>
   <nav>
@@ -322,7 +339,7 @@ footer img {
 
 <section class="hero">
   <div class="hero-card">
-    <img src="images/logo.png" alt="logo"/>
+    <img src="images/logo.png" alt="logo">
     <h1>Our Future</h1>
     <h2>Protecting the environment while creating everyday value.</h2>
     <p>
@@ -335,9 +352,10 @@ footer img {
 <section id="op">
   <h2 class="section-title">OLEA Point (OP) Conversion Engine</h2>
   <div class="op-wrapper">
+
     <div class="op-card">
       <label>Waste oil amount (ml)</label>
-      <input id="oilInput" type="number" value="1000"/>
+      <input id="oilInput" type="number" value="1000">
 
       <label>Select usage sector</label>
       <select id="sector">
@@ -351,15 +369,37 @@ footer img {
     </div>
 
     <div class="op-card">
+
       <div id="thy" class="partner-card">
         <h3>Turkish Airlines – Miles&Smiles</h3>
-        <p>Convert your OP into Miles for award flights.</p>
+        <p>Convert OP into Miles for award flights.</p>
       </div>
 
       <div id="pegasus" class="partner-card">
         <h3>Pegasus Airlines</h3>
         <p>Use OP for discounted tickets.</p>
       </div>
+
+      <div id="fuelCard" class="partner-card">
+        <h3>Fuel & Energy Partners</h3>
+        <ul>
+          <li>Petrol Ofisi (example)</li>
+          <li>SOCAR (example)</li>
+          <li>Tüpraş (example)</li>
+        </ul>
+        <p style="margin-top:10px;font-size:14px;">
+          OP can be converted into fuel discounts or SAF blending credits.
+        </p>
+      </div>
+
+      <div id="municipalityCard" class="partner-card">
+        <h3>Municipal Services</h3>
+        <p>
+          OP can be used for public transportation credits.<br>
+          Example: İzmir Metropolitan Municipality – Transport Card
+        </p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -369,11 +409,11 @@ footer img {
   <div class="impact-grid">
     <div class="impact-box">
       <h3>Water Protection</h3>
-      <p>1 liter waste oil can pollute up to 1 million liters of water.</p>
+      <p>1 liter of waste oil can pollute up to 1 million liters of water.</p>
     </div>
     <div class="impact-box">
       <h3>CO₂ Reduction</h3>
-      <p>Waste oil SAF reduces lifecycle emissions significantly.</p>
+      <p>Waste oil SAF significantly reduces lifecycle emissions.</p>
     </div>
     <div class="impact-box">
       <h3>Circular Economy</h3>
@@ -385,11 +425,27 @@ footer img {
 <section id="sdgs">
   <h2 class="section-title">Supported Sustainable Development Goals</h2>
   <div class="sdg-grid">
-    <div class="sdg sdg6">SDG 6 – Clean Water</div>
-    <div class="sdg sdg7">SDG 7 – Clean Energy</div>
-    <div class="sdg sdg11">SDG 11 – Sustainable Cities</div>
-    <div class="sdg sdg12">SDG 12 – Responsible Consumption</div>
-    <div class="sdg sdg13">SDG 13 – Climate Action</div>
+
+    <a href="https://sdgs.un.org/goals/goal6" target="_blank" class="sdg sdg6">
+      SDG 6 – Clean Water
+    </a>
+
+    <a href="https://sdgs.un.org/goals/goal7" target="_blank" class="sdg sdg7">
+      SDG 7 – Clean Energy
+    </a>
+
+    <a href="https://sdgs.un.org/goals/goal11" target="_blank" class="sdg sdg11">
+      SDG 11 – Sustainable Cities
+    </a>
+
+    <a href="https://sdgs.un.org/goals/goal12" target="_blank" class="sdg sdg12">
+      SDG 12 – Responsible Consumption
+    </a>
+
+    <a href="https://sdgs.un.org/goals/goal13" target="_blank" class="sdg sdg13">
+      SDG 13 – Climate Action
+    </a>
+
   </div>
 </section>
 
@@ -403,7 +459,7 @@ footer img {
 </section>
 
 <footer>
-  <img src="images/logo.png"/>
+  <img src="images/logo.png" alt="OLEA logo">
   <p>OLEA – Turning Waste Oil into Sustainable Value</p>
 </footer>
 
@@ -413,15 +469,26 @@ function calculateOP(){
   const sector = document.getElementById("sector").value;
 
   const op = Math.floor(oil * 0.2);
+
   document.getElementById("opResult").innerText =
     oil + " ml → " + op + " OLEA Points (OP)";
 
   document.getElementById("thy").style.display = "none";
   document.getElementById("pegasus").style.display = "none";
+  document.getElementById("fuelCard").style.display = "none";
+  document.getElementById("municipalityCard").style.display = "none";
 
   if(sector === "aviation"){
     document.getElementById("thy").style.display = "block";
     document.getElementById("pegasus").style.display = "block";
+  }
+
+  if(sector === "fuel"){
+    document.getElementById("fuelCard").style.display = "block";
+  }
+
+  if(sector === "municipality"){
+    document.getElementById("municipalityCard").style.display = "block";
   }
 }
 </script>

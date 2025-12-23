@@ -2,388 +2,429 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <title>OLEA – Turning Waste Oil into Sustainable Value</title>
 
 <style>
-
-/* =========================================================
-   ROOT VARIABLES – ECO COLOR PALETTE
-========================================================= */
-:root {
-  --green-dark: #1f3d2b;
-  --green-main: #2f7d4e;
-  --green-soft: #e6f4ec;
-  --green-mint: #cfeedd;
-  --green-light: #f3fbf7;
-
-  --text-dark: #1c2b23;
-  --text-soft: #445c50;
-
-  --glass-bg: rgba(255, 255, 255, 0.22);
-  --glass-blur: blur(12px);
-
-  --radius-lg: 24px;
-  --radius-md: 16px;
-}
-
-/* =========================================================
-   RESET
-========================================================= */
+/* =====================================================
+   RESET & ROOT
+===================================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
+:root {
+  --green-dark: #1f3d2b;
+  --green-main: #2f6b4f;
+  --green-light: #4caf84;
+  --glass: rgba(255,255,255,0.18);
+  --glass-strong: rgba(255,255,255,0.25);
+  --text-dark: #0e1f16;
+  --text-light: #ffffff;
+}
+
+/* =====================================================
+   BODY
+===================================================== */
 body {
-  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #eef3ef;
   color: var(--text-dark);
-  background: #ffffff;
-  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* =========================================================
+/* =====================================================
    NAVBAR
-========================================================= */
-nav {
+===================================================== */
+header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
-  background: rgba(31, 61, 43, 0.75);
-  backdrop-filter: blur(10px);
-}
-
-.nav-inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 14px 24px;
+  height: 80px;
+  background: rgba(30,60,44,0.85);
+  backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 60px;
+  z-index: 1000;
 }
 
-.nav-logo {
+.nav-left {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
 }
 
-.nav-logo img {
-  height: 56px;
+.nav-left img {
+  height: 46px;
 }
 
-.nav-logo span {
-  font-size: 32px;
+.nav-left span {
+  color: #fff;
+  font-size: 34px;
   font-weight: 700;
-  color: #ffffff;
+  letter-spacing: 1px;
 }
 
-.nav-links a {
-  color: #ffffff;
+nav a {
+  margin-left: 26px;
+  color: #fff;
   text-decoration: none;
-  margin-left: 24px;
   font-weight: 500;
+  opacity: 0.9;
 }
 
-/* =========================================================
-   HERO SECTION
-========================================================= */
+nav a:hover {
+  opacity: 1;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
 .hero {
   min-height: 100vh;
-  background: url("images/hero-bg.webp") center / cover no-repeat;
-  position: relative;
-  padding-top: 120px;
+  background:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    url("images/hero-eco.png") center/cover no-repeat;
   display: flex;
   align-items: center;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25);
-}
-
-.hero-content {
-  position: relative;
-  max-width: 1200px;
-  margin: auto;
-  padding: 24px;
+  padding: 140px 60px 80px;
 }
 
 .hero-card {
-  max-width: 520px;
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  border-radius: var(--radius-lg);
-  padding: 48px;
+  max-width: 560px;
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 40px;
+  color: #fff;
 }
 
 .hero-card img {
-  height: 72px;
-  margin-bottom: 24px;
+  height: 64px;
+  margin-bottom: 18px;
 }
 
 .hero-card h1 {
   font-size: 56px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .hero-card h2 {
   font-size: 28px;
-  font-weight: 400;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  font-weight: 500;
 }
 
 .hero-card p {
-  color: var(--text-soft);
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.95;
 }
 
-/* =========================================================
+/* =====================================================
    SECTION BASE
-========================================================= */
+===================================================== */
 section {
-  padding: 100px 24px;
+  padding: 100px 60px;
 }
 
-.section-inner {
-  max-width: 1200px;
-  margin: auto;
+.section-title {
+  font-size: 38px;
+  margin-bottom: 40px;
 }
 
-/* =========================================================
-   CONVERSION ENGINE
-========================================================= */
-.conversion {
-  background: url("images/savings.webp") center / cover no-repeat;
+/* =====================================================
+   OP CONVERSION ENGINE
+===================================================== */
+#op {
+  background:
+    linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+    url("images/savings.webp") center/cover no-repeat;
 }
 
-.converter-wrapper {
+.op-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
 }
 
-.converter-card {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  border-radius: var(--radius-lg);
-  padding: 40px;
+.op-card {
+  background: var(--glass-strong);
+  backdrop-filter: blur(10px);
+  border-radius: 22px;
+  padding: 36px;
 }
 
-.converter-card h3 {
-  margin-bottom: 24px;
+.op-card label {
+  font-weight: 600;
 }
 
-.converter-card input,
-.converter-card select {
+.op-card input,
+.op-card select {
   width: 100%;
+  margin-top: 8px;
+  margin-bottom: 22px;
   padding: 14px;
-  border-radius: var(--radius-md);
+  border-radius: 10px;
   border: none;
-  margin-bottom: 16px;
+  font-size: 16px;
 }
 
-.converter-card button {
+.op-card button {
   width: 100%;
   padding: 16px;
-  border-radius: var(--radius-md);
   border: none;
+  border-radius: 12px;
   background: var(--green-main);
-  color: white;
+  color: #fff;
   font-size: 18px;
   cursor: pointer;
 }
 
-.result {
+.op-card button:hover {
+  background: var(--green-dark);
+}
+
+#opResult {
   margin-top: 20px;
   font-weight: 600;
 }
 
-/* =========================================================
-   IMPACT SECTION
-========================================================= */
-.impact {
-  background: url("images/ocean.webp") center / cover no-repeat;
+/* =====================================================
+   PARTNERS
+===================================================== */
+.partner-card {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(0,0,0,0.05);
+  display: none;
 }
 
-.impact-card {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  border-radius: var(--radius-lg);
-  padding: 48px;
-  max-width: 600px;
+/* =====================================================
+   IMPACT
+===================================================== */
+#impact {
+  background:
+    linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+    url("images/ocean.webp") center/cover no-repeat;
 }
 
-/* =========================================================
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+
+.impact-box {
+  background: var(--glass-strong);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+}
+
+/* =====================================================
    SDGs
-========================================================= */
-.sdgs {
-  background: var(--green-light);
+===================================================== */
+#sdgs {
+  background: #0f1e17;
+  color: #fff;
 }
 
 .sdg-grid {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 18px;
 }
 
 .sdg {
-  padding: 16px 20px;
-  border-radius: 12px;
+  padding: 18px;
+  border-radius: 14px;
   font-weight: 600;
-  color: white;
 }
 
-.sdg6 { background: #26bde2; }
-.sdg7 { background: #fcc30b; }
-.sdg11 { background: #fd9d24; }
-.sdg12 { background: #bf8b2e; }
-.sdg13 { background: #3f7e44; }
+.sdg6 { background:#2bbbe0; }
+.sdg7 { background:#f9c80e; }
+.sdg11{ background:#f8961e; }
+.sdg12{ background:#c9972b; }
+.sdg13{ background:#43aa5e; }
 
-/* =========================================================
-   NAME ORIGIN
-========================================================= */
-.name-origin {
+/* =====================================================
+   WHY OLEA
+===================================================== */
+#why {
   background:
-    linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
-    url("images/ouroboros-forest.webp") center / cover no-repeat;
+    linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+    url("images/ouroboros.png") center/cover no-repeat;
 }
 
-.name-card {
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  border-radius: var(--radius-lg);
-  padding: 48px;
-  max-width: 700px;
+.why-box {
+  max-width: 720px;
+  background: var(--glass-strong);
+  backdrop-filter: blur(10px);
+  border-radius: 22px;
+  padding: 40px;
 }
 
-/* =========================================================
+/* =====================================================
    FOOTER
-========================================================= */
+===================================================== */
 footer {
-  background: var(--green-dark);
-  padding: 60px 24px;
-  text-align: center;
-  color: white;
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:40px;
 }
 
 footer img {
-  height: 80px;
-  margin-bottom: 16px;
+  height:80px;
+  margin-bottom:16px;
 }
 
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media(max-width:900px){
+  .op-wrapper,
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+  header {
+    padding: 0 20px;
+  }
+  section {
+    padding: 80px 20px;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <div class="nav-logo">
-      <img src="images/logo.png" alt="OLEA Logo">
-      <span>OLEA</span>
-    </div>
-    <div class="nav-links">
-      <a href="#conversion">OLEA Points</a>
-      <a href="#impact">Impact</a>
-      <a href="#sdgs">SDGs</a>
-      <a href="#name">Why OLEA?</a>
-    </div>
+<header>
+  <div class="nav-left">
+    <img src="images/logo.png" alt="OLEA Logo"/>
+    <span>OLEA</span>
   </div>
-</nav>
+  <nav>
+    <a href="#op">OLEA Points</a>
+    <a href="#impact">Impact</a>
+    <a href="#sdgs">SDGs</a>
+    <a href="#why">Why OLEA?</a>
+  </nav>
+</header>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
-    <div class="hero-card">
-      <img src="images/logo.png" alt="">
-      <h1>OLEA</h1>
-      <h2>Our Future</h2>
-      <p>
-        Protecting the environment while creating everyday value.<br><br>
-        OLEA transforms waste oil into sustainable aviation fuel, clean mobility solutions and tangible value for everyday life.
-      </p>
-    </div>
+  <div class="hero-card">
+    <img src="images/logo.png" alt="logo"/>
+    <h1>Our Future</h1>
+    <h2>Protecting the environment while creating everyday value.</h2>
+    <p>
+      OLEA transforms waste oil into sustainable aviation fuel,
+      clean mobility solutions and tangible value for everyday life.
+    </p>
   </div>
 </section>
 
-<!-- CONVERSION -->
-<section id="conversion" class="conversion">
-  <div class="section-inner">
-    <h2>OLEA Point (OP) Conversion Engine</h2>
-    <div class="converter-wrapper">
-      <div class="converter-card">
-        <h3>Waste oil input</h3>
-        <input type="number" value="1000">
-        <select>
-          <option>Aviation</option>
-          <option>Fuel</option>
-          <option>Municipal Services</option>
-        </select>
-        <button>Calculate Impact</button>
-        <div class="result">1000 ml → 200 OLEA Points (OP)</div>
+<section id="op">
+  <h2 class="section-title">OLEA Point (OP) Conversion Engine</h2>
+  <div class="op-wrapper">
+    <div class="op-card">
+      <label>Waste oil amount (ml)</label>
+      <input id="oilInput" type="number" value="1000"/>
+
+      <label>Select usage sector</label>
+      <select id="sector">
+        <option value="aviation">Aviation</option>
+        <option value="fuel">Fuel</option>
+        <option value="municipality">Municipality</option>
+      </select>
+
+      <button onclick="calculateOP()">Calculate Impact</button>
+      <div id="opResult"></div>
+    </div>
+
+    <div class="op-card">
+      <div id="thy" class="partner-card">
+        <h3>Turkish Airlines – Miles&Smiles</h3>
+        <p>Convert your OP into Miles for award flights.</p>
       </div>
 
-      <div class="converter-card">
-        <h3>Available rewards</h3>
-        <p>Turkish Airlines – Miles&Smiles</p>
-        <p>Pegasus – Ticket rewards</p>
-        <p>Municipal transport credits</p>
+      <div id="pegasus" class="partner-card">
+        <h3>Pegasus Airlines</h3>
+        <p>Use OP for discounted tickets.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- IMPACT -->
-<section id="impact" class="impact">
-  <div class="section-inner">
-    <div class="impact-card">
-      <h2>Your Environmental Impact</h2>
-      <p>
-        Just 1 liter of waste oil can contaminate up to 1 million liters of water.
-        By redirecting waste oil into SAF and clean mobility, OLEA prevents irreversible environmental damage.
-      </p>
+<section id="impact">
+  <h2 class="section-title">Your Environmental Impact</h2>
+  <div class="impact-grid">
+    <div class="impact-box">
+      <h3>Water Protection</h3>
+      <p>1 liter waste oil can pollute up to 1 million liters of water.</p>
+    </div>
+    <div class="impact-box">
+      <h3>CO₂ Reduction</h3>
+      <p>Waste oil SAF reduces lifecycle emissions significantly.</p>
+    </div>
+    <div class="impact-box">
+      <h3>Circular Economy</h3>
+      <p>From waste to value, endlessly.</p>
     </div>
   </div>
 </section>
 
-<!-- SDGs -->
-<section id="sdgs" class="sdgs">
-  <div class="section-inner">
-    <h2>Supported Sustainable Development Goals</h2>
-    <div class="sdg-grid">
-      <div class="sdg sdg6">SDG 6 – Clean Water</div>
-      <div class="sdg sdg7">SDG 7 – Clean Energy</div>
-      <div class="sdg sdg11">SDG 11 – Sustainable Cities</div>
-      <div class="sdg sdg12">SDG 12 – Responsible Consumption</div>
-      <div class="sdg sdg13">SDG 13 – Climate Action</div>
-    </div>
+<section id="sdgs">
+  <h2 class="section-title">Supported Sustainable Development Goals</h2>
+  <div class="sdg-grid">
+    <div class="sdg sdg6">SDG 6 – Clean Water</div>
+    <div class="sdg sdg7">SDG 7 – Clean Energy</div>
+    <div class="sdg sdg11">SDG 11 – Sustainable Cities</div>
+    <div class="sdg sdg12">SDG 12 – Responsible Consumption</div>
+    <div class="sdg sdg13">SDG 13 – Climate Action</div>
   </div>
 </section>
 
-<!-- NAME -->
-<section id="name" class="name-origin">
-  <div class="section-inner">
-    <div class="name-card">
-      <h2>Where Does Our Name Come From?</h2>
-      <p>
-        <strong>Olea</strong> means olive and oil in Latin — a symbol of peace and sustainability.<br><br>
-        <strong>OurOil</strong> represents shared ownership and collective value. “Ouro” also means gold in Portuguese.<br><br>
-        <strong>Ouroboros</strong> symbolizes the infinite cycle — the core philosophy of OLEA.
-      </p>
-    </div>
+<section id="why">
+  <h2 class="section-title">Where Does Our Name Come From?</h2>
+  <div class="why-box">
+    <p><strong>OLEA</strong> means olive and oil in Latin — a symbol of peace.</p>
+    <p><strong>OurOil</strong> represents shared value; “Ouro” also means gold.</p>
+    <p><strong>Ouroboros</strong> symbolizes the infinite cycle.</p>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <img src="images/logo.png" alt="">
+  <img src="images/logo.png"/>
   <p>OLEA – Turning Waste Oil into Sustainable Value</p>
 </footer>
+
+<script>
+function calculateOP(){
+  const oil = Number(document.getElementById("oilInput").value);
+  const sector = document.getElementById("sector").value;
+
+  const op = Math.floor(oil * 0.2);
+  document.getElementById("opResult").innerText =
+    oil + " ml → " + op + " OLEA Points (OP)";
+
+  document.getElementById("thy").style.display = "none";
+  document.getElementById("pegasus").style.display = "none";
+
+  if(sector === "aviation"){
+    document.getElementById("thy").style.display = "block";
+    document.getElementById("pegasus").style.display = "block";
+  }
+}
+</script>
 
 </body>
 </html>

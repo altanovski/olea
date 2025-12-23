@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OLEA – Turning Waste Oil into Sustainable Value</title>
+<title>OLEA – Our Future</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -46,9 +46,7 @@ nav{
   gap:14px;
 }
 
-nav img{
-  height:42px;
-}
+nav img{ height:42px }
 
 nav a{
   color:white;
@@ -60,17 +58,17 @@ nav a{
 .hero{
   max-width:1200px;
   margin:auto;
-  padding:120px 20px;
+  padding:120px 20px 80px;
 }
 
 .hero h1{
-  font-size:3rem;
-  max-width:850px;
+  font-size:3.4rem;
+  margin-bottom:10px;
 }
 
 .hero p{
+  font-size:1.2rem;
   max-width:700px;
-  font-size:1.15rem;
 }
 
 section{
@@ -84,8 +82,8 @@ section{
 
 h2{
   font-size:2.4rem;
-  margin-bottom:24px;
   color:var(--green);
+  margin-bottom:24px;
 }
 
 .cards{
@@ -107,9 +105,15 @@ h2{
 }
 
 input, select{
-  padding:10px;
+  padding:12px;
   font-size:1rem;
   margin-top:10px;
+}
+
+.op-box{
+  background:#f4f6f5;
+  padding:40px;
+  border-radius:16px;
 }
 
 .sdg-grid{
@@ -123,7 +127,7 @@ input, select{
   padding:20px;
   border-left:6px solid;
   cursor:pointer;
-  transition:0.2s;
+  transition:.2s;
 }
 
 .sdg-card:hover{
@@ -157,84 +161,98 @@ footer img{
 <header>
   <nav>
     <div class="brand">
-      <img src="images/ouroboros.png" alt="Ouroboros Logo">
+      <img src="images/ouroboros.png">
       <strong>OLEA</strong>
     </div>
     <div>
+      <a href="#op">OLEA Points</a>
       <a href="#about">About</a>
       <a href="#impact">Impact</a>
-      <a href="#points">OLEA Points</a>
       <a href="#sdg">SDGs</a>
     </div>
   </nav>
 
   <div class="hero">
-    <h1>Activating Waste Oil for Sustainable Aviation and Clean Mobility</h1>
+    <h1>Our Future</h1>
+    <p><em>Protecting the environment while creating everyday value.</em></p>
     <p>
-      OLEA transforms waste oil into measurable environmental impact,
-      Sustainable Aviation Fuel (SAF) feedstock and clean urban mobility benefits.
+      OLEA transforms waste oil into sustainable aviation fuel, clean mobility
+      solutions and tangible value for everyday life.
     </p>
   </div>
 </header>
 
-<section id="about">
-<div class="container">
-<h2>About OLEA</h2>
-<div class="cards">
-  <div class="card">
-    <h3>Vision</h3>
-    Turning waste oil into a strategic resource for the energy transition.
-  </div>
-  <div class="card">
-    <h3>System</h3>
-    A traceable, incentive-based collection and allocation platform.
-  </div>
-  <div class="card">
-    <h3>Why It Matters</h3>
-    Sustainable fuels fail without feedstock. OLEA fixes the source.
-  </div>
-</div>
-</div>
-</section>
-
-<section id="impact" class="system-bg">
-<div class="container">
-<h2>Environmental Impact</h2>
-<p style="font-size:1.15rem;max-width:900px">
-<strong>1 liter of improperly disposed waste oil can contaminate up to
-1,000,000 liters of freshwater.</strong><br><br>
-OLEA prevents this irreversible environmental damage by enabling controlled
-collection and conversion of waste oil into SAF, biodiesel and public services.
-</p>
-</div>
-</section>
-
-<section id="points" style="background:#f4f6f5">
+<!-- OP CONVERSION ENGINE -->
+<section id="op">
 <div class="container">
 <h2>OLEA Point (OP) Conversion Engine</h2>
 
-<label><strong>Waste oil input (ml)</strong></label><br>
-<input type="number" id="oilInput" value="1000">
-
-<p><strong>Earned OLEA Points:</strong>
-<span id="opValue" style="color:#1f7a4f;font-weight:700">200</span> OP
+<div class="op-box">
+<p>
+Turn your waste oil contribution into measurable environmental impact and usable value.
 </p>
 
-<label><strong>Select usage sector</strong></label><br>
+<label><strong>Your contribution (ml)</strong></label><br>
+<input type="number" id="oilInput" value="1000">
+
+<p><strong>Your Impact Balance:</strong><br>
+<span id="opValue" style="color:#1f7a4f;font-size:1.8rem;font-weight:700">200</span> OLEA Points (OP)
+</p>
+
+<p>
+OLEA Points represent your personal share in clean energy and sustainable mobility.
+</p>
+
+<label><strong>Where would you like to use your OLEA Points?</strong></label><br>
 <select id="sector">
   <option value="">-- Choose --</option>
-  <option value="fuel">Fuel / Akaryakıt</option>
-  <option value="aviation">Aviation</option>
+  <option value="fuel">Fuel & Energy</option>
+  <option value="aviation">Aviation & SAF</option>
   <option value="municipality">Municipal Services</option>
 </select>
 
 <div id="partners" style="margin-top:30px"></div>
+
+<p style="margin-top:30px;font-style:italic">
+Every drop of waste oil becomes a choice that shapes our future.
+</p>
+</div>
 </div>
 </section>
 
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+<h2>About OLEA</h2>
+
+<p style="max-width:900px">
+OLEA is a circular value platform designed to close the gap between waste oil
+generation and sustainable energy demand. By combining traceable collection,
+incentive mechanisms and sector-based allocation, OLEA turns a widespread
+environmental problem into a scalable solution for aviation, energy and urban mobility.
+</p>
+</div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact" class="system-bg">
+<div class="container">
+<h2>Environmental Impact</h2>
+
+<p style="font-size:1.15rem;max-width:900px">
+<strong>1 liter of improperly disposed waste oil can contaminate up to
+1,000,000 liters of freshwater.</strong><br><br>
+OLEA prevents this irreversible damage by enabling controlled collection
+and conversion of waste oil into Sustainable Aviation Fuel (SAF), biodiesel
+and clean mobility services.
+</p>
+</div>
+</section>
+
+<!-- SDG -->
 <section id="sdg">
 <div class="container">
-<h2>Contribution to UN Sustainable Development Goals</h2>
+<h2>Contribution to the UN Sustainable Development Goals</h2>
 
 <div class="sdg-grid">
   <div class="sdg-card sdg6" onclick="window.open('https://sdgs.un.org/goals/goal6')">
@@ -256,6 +274,28 @@ collection and conversion of waste oil into SAF, biodiesel and public services.
     <strong>SDG 13</strong><br>Climate Action
   </div>
 </div>
+</div>
+</section>
+
+<!-- WHY NAMES -->
+<section>
+<div class="container">
+<h2>Why These Names?</h2>
+
+<p><strong>OLEA</strong><br>
+Derived from Latin, <em>Olea</em> means olive and oil. The olive branch has symbolized
+peace, continuity and shared prosperity throughout history.
+</p>
+
+<p><strong>OurOil</strong><br>
+Represents “our oil” — a shared responsibility and a shared resource.
+<em>Ouro</em> also means gold in Portuguese, symbolizing the hidden value within waste.
+</p>
+
+<p><strong>Ouroboros</strong><br>
+An ancient symbol representing infinity and circular continuity — a system where
+every output becomes a new input.
+</p>
 </div>
 </section>
 
@@ -282,10 +322,10 @@ oilInput.oninput = updateOP;
 sector.onchange = () => {
   let html = "";
   if(sector.value==="fuel"){
-    html="<h3>Fuel Partners</h3><ul><li>Petrol Ofisi</li><li>Company A</li><li>Company B</li></ul>";
+    html="<h3>Fuel & Energy</h3><ul><li>Petrol Ofisi</li><li>SOCAR</li><li>Tüpraş</li></ul>";
   }
   if(sector.value==="aviation"){
-    html="<h3>Aviation Partners</h3><ul><li>Pegasus Airlines</li><li>Turkish Airlines</li></ul>";
+    html="<h3>Aviation & SAF</h3><ul><li>Turkish Airlines</li><li>Pegasus Airlines</li><li>Istanbul Airport</li><li>TFS</li></ul>";
   }
   if(sector.value==="municipality"){
     html="<h3>Municipal Services</h3><ul><li>İzmir Metropolitan Municipality – Public Transport Card</li></ul>";

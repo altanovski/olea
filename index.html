@@ -20,8 +20,10 @@ body{
   margin:0;
   font-family:Inter,sans-serif;
   color:#1a1a1a;
-  line-height:1.6;
+  line-height:1.65;
 }
+
+/* ---------------- HEADER / HERO ---------------- */
 
 header{
   background:
@@ -33,7 +35,7 @@ header{
 nav{
   max-width:1300px;
   margin:auto;
-  padding:24px;
+  padding:20px 24px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -42,16 +44,16 @@ nav{
 .brand{
   display:flex;
   align-items:center;
-  gap:20px;
-  background:rgba(255,255,255,0.08);
-  padding:12px 20px;
+  gap:18px;
+  background:rgba(255,255,255,.08);
+  padding:10px 20px;
   border-radius:14px;
 }
 
-.brand img{height:120px}
+.brand img{height:90px}
 
 .brand span{
-  font-size:3.2rem;
+  font-size:2.6rem;
   font-weight:800;
   letter-spacing:3px;
 }
@@ -59,43 +61,43 @@ nav{
 nav a{
   color:white;
   text-decoration:none;
-  margin-left:28px;
+  margin-left:26px;
   font-weight:600;
 }
 
 .hero{
   max-width:1300px;
   margin:auto;
-  padding:120px 24px 90px;
+  padding:60px 24px 50px;
 }
 
 .hero-box{
-  background:rgba(15,31,26,0.55);
-  padding:50px;
-  border-radius:22px;
-  max-width:900px;
+  background:rgba(15,31,26,.55);
+  padding:35px;
+  border-radius:20px;
+  max-width:850px;
 }
 
-.hero-box img{height:180px;margin-bottom:20px}
+.hero-box img{height:130px;margin-bottom:16px}
 
 .hero-box .name{
-  font-size:4.8rem;
+  font-size:3.6rem;
   font-weight:800;
-  letter-spacing:5px;
+  letter-spacing:4px;
 }
 
 .hero-box h1{
-  font-size:3.2rem;
-  margin-top:10px;
+  font-size:2.4rem;
+  margin:8px 0;
 }
 
 .hero-box p{
-  font-size:1.2rem;
+  font-size:1.05rem;
 }
 
-section{
-  padding:90px 24px;
-}
+/* ---------------- SECTIONS ---------------- */
+
+section{padding:80px 24px}
 
 .container{
   max-width:1300px;
@@ -103,18 +105,28 @@ section{
 }
 
 h2{
-  font-size:2.6rem;
+  font-size:2.4rem;
   color:var(--green);
   margin-bottom:24px;
 }
 
+/* ---------------- OP ENGINE ---------------- */
+
+#op{
+  background:
+    linear-gradient(rgba(244,246,245,.92),rgba(244,246,245,.92)),
+    url("images/savings.webp") center/cover no-repeat;
+}
+
 .op-box{
-  background:var(--light);
-  padding:44px;
+  background:white;
+  padding:42px;
   border-radius:22px;
+  max-width:700px;
 }
 
 input,select{
+  width:100%;
   padding:14px;
   font-size:1rem;
   margin-top:10px;
@@ -122,16 +134,29 @@ input,select{
 
 .card{
   background:#f9fbfa;
-  padding:26px;
+  padding:24px;
   border-radius:16px;
-  margin-top:30px;
+  margin-top:28px;
 }
 
 .disclaimer{
   font-size:.85rem;
   color:#555;
-  margin-top:20px;
+  margin-top:16px;
 }
+
+/* ---------------- IMPACT ---------------- */
+
+#impact{
+  background:
+    linear-gradient(rgba(15,31,26,.75),rgba(15,31,26,.75)),
+    url("images/ocean.webp") center/cover no-repeat;
+  color:white;
+}
+
+#impact h2{color:#b8f5d0}
+
+/* ---------------- SDGs ---------------- */
 
 .sdg-grid{
   display:grid;
@@ -141,10 +166,13 @@ input,select{
 
 .sdg{
   padding:22px;
-  border-left:6px solid;
   background:#f9fbfa;
+  border-left:6px solid;
   cursor:pointer;
+  transition:.2s;
 }
+
+.sdg:hover{transform:translateY(-4px)}
 
 .sdg6{border-color:#26BDE2}
 .sdg7{border-color:#FCC30B}
@@ -153,6 +181,8 @@ input,select{
 .sdg12{border-color:#BF8B2E}
 .sdg13{border-color:#3F7E44}
 
+/* ---------------- FOOTER ---------------- */
+
 footer{
   background:#0f1f1a;
   color:white;
@@ -160,7 +190,7 @@ footer{
   padding:90px 24px;
 }
 
-footer img{height:150px;margin-bottom:30px}
+footer img{height:130px;margin-bottom:26px}
 </style>
 </head>
 
@@ -175,8 +205,8 @@ footer img{height:150px;margin-bottom:30px}
   <div>
     <a href="#op">OLEA Points</a>
     <a href="#impact">Impact</a>
-    <a href="#why">Why OLEA?</a>
     <a href="#sdg">SDGs</a>
+    <a href="#why">Why OLEA?</a>
   </div>
 </nav>
 
@@ -194,12 +224,13 @@ footer img{height:150px;margin-bottom:30px}
 </div>
 </header>
 
+<!-- OP ENGINE -->
 <section id="op">
 <div class="container">
 <h2>OLEA Point (OP) Conversion Engine</h2>
 
 <div class="op-box">
-<label><strong>Your contribution (ml)</strong></label><br>
+<label><strong>Your contribution (ml)</strong></label>
 <input type="number" id="oilInput" value="1000">
 
 <p style="font-size:1.3rem">
@@ -209,7 +240,7 @@ footer img{height:150px;margin-bottom:30px}
 </span> OLEA Points (OP)
 </p>
 
-<label><strong>How would you like to convert your OLEA Points?</strong></label><br>
+<label><strong>How would you like to use your OLEA Points?</strong></label>
 <select id="sector">
   <option value="">-- Select --</option>
   <option value="aviation">Aviation & SAF</option>
@@ -219,47 +250,27 @@ footer img{height:150px;margin-bottom:30px}
 
 <div id="details"></div>
 
-<p style="margin-top:30px;font-style:italic">
+<p style="margin-top:28px;font-style:italic">
 Every drop of waste oil becomes a choice that shapes our future.
 </p>
 </div>
 </div>
 </section>
 
+<!-- IMPACT -->
 <section id="impact">
 <div class="container">
 <h2>Your Environmental Impact</h2>
-<p style="font-size:1.15rem;max-width:900px">
+<p style="font-size:1.1rem;max-width:850px">
 <strong>1 liter of improperly disposed waste oil can contaminate up to
 1,000,000 liters of freshwater.</strong><br><br>
-Based on your contribution, OLEA prevents irreversible environmental damage
-and supports sustainable aviation fuel, biodiesel production and clean
-urban mobility systems.
+By contributing through OLEA, you directly help protect water ecosystems,
+enable sustainable aviation fuel production and support cleaner cities.
 </p>
 </div>
 </section>
 
-<section id="why">
-<div class="container">
-<h2>Why OLEA?</h2>
-
-<p><strong>OLEA</strong><br>
-Derived from Latin, <em>Olea</em> means olive and oil. The olive branch has symbolized
-peace, continuity and shared prosperity throughout history.
-</p>
-
-<p><strong>OurOil</strong><br>
-Represents “our oil” — a shared responsibility and a shared resource.
-<em>Ouro</em> also means gold in Portuguese, symbolizing the hidden value within waste.
-</p>
-
-<p><strong>Ouroboros</strong><br>
-An ancient symbol representing infinity and circular continuity — where every
-output becomes a new input.
-</p>
-</div>
-</section>
-
+<!-- SDGs -->
 <section id="sdg">
 <div class="container">
 <h2>Contribution to the UN Sustainable Development Goals</h2>
@@ -284,6 +295,29 @@ output becomes a new input.
     <strong>SDG 13</strong><br>Climate Action
   </div>
 </div>
+</div>
+</section>
+
+<!-- WHY OLEA -->
+<section id="why">
+<div class="container">
+<h2>Where Does Our Name Come From?</h2>
+
+<p><strong>OLEA</strong><br>
+Derived from Latin, <em>Olea</em> means olive and oil.
+The olive branch has symbolized peace, continuity and shared prosperity
+throughout history.
+</p>
+
+<p><strong>OurOil</strong><br>
+Represents “our oil” — a shared responsibility and a shared resource.
+<em>Ouro</em> also means gold in Portuguese, symbolizing the hidden value within waste.
+</p>
+
+<p><strong>Ouroboros</strong><br>
+An ancient symbol representing infinity and circular continuity —
+where every output becomes a new input.
+</p>
 </div>
 </section>
 
@@ -331,7 +365,7 @@ All integrations are conceptual and subject to fuel provider policies.
 }
 if(sector.value==="municipal"){
 html=`<div class="card">
-<h3>İzmir Metropolitan Municipality – Public Transport</h3>
+<h3>Municipal Services – Urban Transport</h3>
 <p>
 OLEA Points transform environmental contributions into urban mobility value.
 </p>
@@ -346,3 +380,4 @@ details.innerHTML=html;
 
 </body>
 </html>
+
